@@ -21,12 +21,13 @@ provider "aws" {
 # Módulo que cria instancias ec2 na AWS
 # Utilizamos um for_each nessa chamada para forçar a execução de quantas vezes for necessária
 module "ec2" {
-  source                  = "git@github.com:PedroDevOps/descomplicando_terraform_module.git?ref=v0.2"
+  source                  = "git@github.com:PedroDevOps/descomplicando_terraform_module.git?ref=v0.3"
   app_name                = each.value.app_name
   instance_type           = each.value.instance_type
   for_each                = var.projeto
 }
 
+# Imprimi o Ip Público da Instancia criada
 output "ip_address_ec2" {
   value = values(module.ec2)[*].ip_address
 }
