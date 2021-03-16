@@ -13,7 +13,7 @@ terraform {
 }
 
 module "ec2" {
-  source                  = "git@github.com:PedroDevOps/descomplicando_terraform_module.git?ref=v0.1"
+  source                  = "git@github.com:PedroDevOps/descomplicando_terraform_module.git?ref=v0.2"
   app_name                = "ec2_app"
   instance_type           = "t2.micro"
 }
