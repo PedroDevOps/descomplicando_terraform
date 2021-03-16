@@ -1,9 +1,15 @@
-variable "github_token" {
-    type = string
-    description = "Token da conta usada para manipular o github"
+variable "hash_commit" {
+  default = "806d52dafe9b7fddbc4f0d2d41086ed3cfa02a44"
 }
 
-variable "github_owner" {
-    type = string
-    description = "Nome da conta usada para manipular o github"
+variable "app_name" {
+  type        = string
+  default     = "Sem nome"
+  description = "Nome da app"
+}
+
+variable "instance_type" {
+  type = string
+  default = "t2.micro"
+  description = "Tipo de instância ec2 usada na AWS"
 }
