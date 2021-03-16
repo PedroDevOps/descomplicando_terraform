@@ -1,6 +1,6 @@
 variable "projeto" {
   description = "Mapa de Projetos"
-  type = "map"
+  type = map
 
   default = {
     projeto1 = {
