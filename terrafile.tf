@@ -5,7 +5,7 @@
 #Provider que será utilizado será a AWS
 provider "aws" {
   region  = "us-east-2"
-  version = "~> 3.0"
+#  version = "~> 3.0"
 }
 
 # Se quiser colocar o state em um bucket s3 da AWS descomente o bloco a seguir
