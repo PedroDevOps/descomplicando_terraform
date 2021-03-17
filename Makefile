@@ -50,3 +50,9 @@ packer-build: ## packer build
 packer-sh: ## packer console
 	  docker run -it --rm -v $$PWD:/app -v $$HOME/.ssh/:/root/.ssh/ -w /app/ -e AWS_ACCESS_KEY_ID=$$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$$AWS_SECRET_ACCESS_KEY --entrypoint "" hashicorp/packer sh
 
+#
+# Problema de permissão no github
+# https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+# $ eval `ssh-agent -s`
+# $ ssh-add ~/.ssh/id_rsa_vcCode
+#
